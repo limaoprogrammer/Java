@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class isPar {
+    public static boolean isPar(int n1) {
+        return n1 % 2 == 0; 
+    }
+
+    public static void main(String[] args) {
+        Scanner natan = new Scanner(System.in);
+        int n1;
+
+        System.out.println("Digite um número: ");
+        n1 = natan.nextInt();
+
+        if(isPar(n1)) {
+            System.out.println("Número par.");
+        } else {
+            System.out.println("Número Impar. ");
+        }
+        natan.close();
+
+
+    }
+}
