@@ -1,0 +1,21 @@
+ import java.util.Scanner;
+
+ public class fatorial {
+    public static int calcularFatorial(int num) {
+        int fatorial = 1;
+        for (int i = 2; i <= num; i++) {
+            fatorial *= i;
+        }
+        return fatorial;
+    }
+
+    public static void main(String[] args) {
+        Scanner natan = new Scanner(System.in);
+        
+        System.out.println("Digite um número inteiro: ");
+        int num = natan.nextInt();
+
+        int result = calcularFatorial(num);
+        System.out.println("O fatorial de " + num + " é: " + result);
+    }
+}
