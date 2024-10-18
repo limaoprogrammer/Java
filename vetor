@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class vetor {
+
+    public static int encontrarMaior(int[] vetor) {
+        int maior = vetor[0];
+        for (int num : vetor) {
+            if (num > maior) maior = num;
+        }
+        return maior;
+    }
+
+    public static int encontrarMenor(int[] vetor) {
+        int menor = vetor[0];
+        for (int num : vetor) {
+            if (num < menor) menor = num;
+        }
+        return menor;
+    }
+
+    public static double calcularMedia(int maior, int menor) {
+        return (maior + menor) / 2.0;
+    }
+
+    public static void main(String[] args) {
+        Scanner natan = new Scanner(System.in);
+        
+        System.out.println("Digite o tamanho do vetor: ");
+        int tamanho = natan.nextInt();
+        int[] vetor = new int[tamanho];
+
+        for (int i = 0; i < tamanho; i++) {
+            System.out.println("Digite o valor " + (i + 1) + ": ");
+            vetor[i] = natan.nextInt();
+        }
+
+        int maior = encontrarMaior(vetor);
+        int menor = encontrarMenor(vetor);
+        double media = calcularMedia(maior, menor);
+
+        System.out.println("O maior numero do vetor e: " + maior + " o menor numero do vetor e: " + menor + " se a media entre o maior e o menor e: " + media);
+    }
+}
