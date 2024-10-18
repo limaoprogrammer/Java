@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Semana {
+    public static void main(String[] args) {
+        Scanner natan = new Scanner(System.in);
+        System.out.println("Verificando os dias da semana...");
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            System.out.println("");
+        }
+        
+        while (true) {
+
+            try {
+                Thread.sleep(800);
+            } catch (InterruptedException e) {
+                System.out.println("");
+            }
+
+            System.out.println("Digite um numero entre 1 a 7. (Use '0' para finalizar o programa.).");
+            int dia = natan.nextInt();
+
+            if (dia == 0) {
+                System.out.println("Programa finalizado..");
+                break;
+            }
+            
+            String result = DiaSemana(dia); 
+            System.out.println(result); 
+        }
+        
+        natan.close(); // Fecha o scanner
+    }
+
+    public static String DiaSemana(int dia) {
+        switch (dia) {
+            case 1:
+                return "Segunda-feira";
+            case 2:
+                return "Terca-feira";
+            case 3:
+                return "Quarta-feira";
+            case 4:
+                return "Quinta-feira";
+            case 5:
+                return "Sexta-feira";
+            case 6:
+                return "Sabado";
+            case 7:
+                return "Domingo";
+            default:
+                return "Dia da semana invalido, tente novamente!";
+        }
+    }
+}
