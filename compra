@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+
+public class compra {
+    public static void main(String[] args) {
+        Scanner natan = new Scanner(System.in);
+
+        System.out.println("=================================");
+        System.out.println("Seja bem vindo ao MarketLemon...");
+        System.out.println("=================================");
+
+        System.out.println("Por favor, informe o valor da compra: ");
+        double total = natan.nextDouble();
+        System.out.println("Por favor, informe o cupom: ");
+        String cupom = natan.next();
+
+
+        System.out.print("O valor da sua compra foi de R$" + total + " ");
+        
+        if (cupom.equals("LIMAO100")) {
+            total -= 100;
+        }
+        else if (cupom.equals("LIMAO200")) {
+            total -= 200;
+        }
+        else {
+            System.out.println("Cupom inválido");
+        }
+        System.out.print("e com o desconto ficou R$" + total + ". Volte sempre :) ");
+    }   
+}
