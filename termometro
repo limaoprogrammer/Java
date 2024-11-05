@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+
+public class temperatura {
+    public static void main(String[] args) {
+        Scanner natan = new Scanner(System.in);
+
+        System.out.println("===============================");
+        System.out.println("Seja bem vindo ao TermoLemon...");
+        System.out.println("Por favor, informe a temperatura: ");
+        System.out.println("===============================");
+
+        double temp = natan.nextDouble();
+
+
+        System.out.println("A temperatura digitada é: " + temp + " e o seu estado atual é: ");
+
+        String tipoFebre = "";
+
+        if (temp >= 41) {
+            tipoFebre = "Hipertermia";
+        }
+        else if (temp >= 39.5 && temp < 41) {
+            tipoFebre = "Febre Alta";
+        }   
+        else if (temp >= 37.5 && temp < 39.5) {
+            tipoFebre = "Febre";
+        }
+        else if (temp >= 35 && temp < 37.5) {
+            tipoFebre = "Normal";
+        }
+        else if (temp <= 35 ) {
+            tipoFebre = "Hipotermia";
+        }
+        else {
+            System.out.println("Temperatura invalida.");
+        }
+        System.out.print(tipoFebre);
+    }   
+}
