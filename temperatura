@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+
+public class temperatura {
+        public static void main(String[] args) {
+        Scanner limao = new Scanner(System.in);
+
+        System.out.println("========TERMÔMETRO======");
+        System.out.println("Informe a temperatura: ");
+        System.out.println("========================");
+
+        double temp = limao.nextDouble();
+        
+        boolean normal = temp >= 35 && temp <= 37.5;
+        
+        System.out.println("Temperatura normal? " + normal);
+        
+    }
+}
