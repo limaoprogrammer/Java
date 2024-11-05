@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+
+public class media {
+    public static void main(String[] args) {
+        Scanner limao = new Scanner(System.in);
+
+        System.out.println("Informe a primeira nota: ");
+        double n1 = limao.nextDouble();
+
+        System.out.println("Informe a segunda nota: ");
+        double n2 = limao.nextDouble();
+
+        System.out.println("Informe a terceira nota: ");
+        double n3 = limao.nextDouble();
+
+
+        double media = (n1 + n2 + n3) / 3;
+
+        System.out.println("A média é: " + media);
+
+        String situacao = "";
+
+        if (media >= 6) {
+            situacao = "Aprovado";
+        }
+        else if (media >= 4 && media <6) {
+            situacao = "Recuperação";
+        }   
+        else if (media >= 0 && media < 4) {
+            situacao = "Reprovado";
+        }
+        else {
+            System.out.println("Media invalida.");
+        }
+        System.out.println(situacao);
+    }   
+}
